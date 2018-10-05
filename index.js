@@ -7,7 +7,7 @@ const app = express();
 
 app.set('view engine', 'ejs');
 app.use('/assets', express.static('assets'));
-app.use(expressMongoDb('mongodb://localhost/tiojolo'));
+app.use(expressMongoDb('mongodb://aviao:aviao11@ds123603.mlab.com:23603/tiojolo'));
 app.use(bodyParser.urlencoded());
 
 app.get('/', (req, res) => {
@@ -59,6 +59,6 @@ app.get('/quem-somos', (req, res) => {
     res.render('quem-somos');
 });
 
-app.listen(3000, () => {
+app.listen(process.env.PORT || 3000, () => {
     console.log('Servidor inicializado.');
 });
