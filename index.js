@@ -61,4 +61,5 @@ app.get('/quem-somos', (req, res) => {
 
 app.listen(process.env.PORT || '8080', () => {
     console.log('Servidor inicializado.',server.address().port);
+    console.log("Aperte Ctrl + C para sair");
 });
