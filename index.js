@@ -59,6 +59,6 @@ app.get('/quem-somos', (req, res) => {
     res.render('quem-somos');
 });
 
-app.listen(process.env.PORT || 3000, () => {
-    console.log('Servidor inicializado.');
+app.listen(process.env.PORT || '8080', () => {
+    console.log('Servidor inicializado.',server.address().port);
 });
